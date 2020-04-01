@@ -1,13 +1,12 @@
 const express = require('express')
-
+const ClienteController = require('./controller/ClienteController')
 const routes = express.Router();
 
-routes.post('/cliente', (request, response) =>{
-    const { nome, cpf, telefone, email, cep, endereco, cidade } = request.body
+routes.post('/cliente', ClienteController.create)
+routes.get('/cliente', ClienteController.index)
+routes.delete('/cliente/:id', ClienteController.delete)
+routes.patch('/cliente/:id', ClienteController.atualization)
 
-
-    return response.json({nome, cpf, telefone, email, cep, endereco, cidade})
-})
 
 
 module.exports = routes

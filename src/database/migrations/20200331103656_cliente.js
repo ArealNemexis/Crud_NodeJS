@@ -7,7 +7,7 @@ exports.up = function(knex) {
         table.string('email').notNullable()
         table.string('telefone').notNullable()
         table.string('cep').notNullable()
-        table.string('endereço').notNullable()
+        table.string('endereco').notNullable()
         table.string('cidade').notNullable()
 
     })
